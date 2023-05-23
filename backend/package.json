@@ -1,0 +1,40 @@
+{
+  "name": "express-mesto-gha",
+  "version": "1.0.0",
+  "description": "[![Tests](../../actions/workflows/tests-13-sprint.yml/badge.svg)](../../actions/workflows/tests-13-sprint.yml) [![Tests](../../actions/workflows/tests-14-sprint.yml/badge.svg)](../../actions/workflows/tests-14-sprint.yml) # Проект Mesto фронтенд + бэкенд",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint ./",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilkor4/express-mesto-gha.git"
+  },
+  "keywords": [],
+  "author": "Il.kor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ilkor4/express-mesto-gha/issues"
+  },
+  "homepage": "https://github.com/ilkor4/express-mesto-gha#readme",
+  "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^2.0.22",
+    "eslint-config-airbnb-base": "15.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "celebrate": "^15.0.1",
+    "cookie-parser": "^1.4.6",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "parser": "^0.1.4",
+    "validator": "^13.9.0"
+  }
+}
