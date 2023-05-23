@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 
 const { cardsRouter, userRouter } = require('./routes');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { PORT } = require('./utils/config');
 const NotFoundError = require('./errors/not-found-err');
 const globalErrorsHandler = require('./middlewares/globalErrorsHandler');
@@ -17,8 +18,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 app.use(express.json());
 app.use(cookieParser());
 
+app.use(requestLogger);
+
 app.use('/', userRouter);
 app.use('/', cardsRouter);
+
+app.use(errorLogger);
+
 app.use('*', (req, res, next) => {
   next(new NotFoundError('Ошибка 404. Данного ресурса не существует.'));
 });

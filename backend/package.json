@@ -22,9 +22,9 @@
   "homepage": "https://github.com/ilkor4/express-mesto-gha#readme",
   "devDependencies": {
     "eslint": "^8.38.0",
+    "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "^2.27.5",
-    "nodemon": "^2.0.22",
-    "eslint-config-airbnb-base": "15.0.0"
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -32,9 +32,11 @@
     "cookie-parser": "^1.4.6",
     "eslint-config-airbnb-base": "^15.0.0",
     "express": "^4.18.2",
+    "express-winston": "^4.2.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.3",
     "parser": "^0.1.4",
-    "validator": "^13.9.0"
+    "validator": "^13.9.0",
+    "winston": "^3.8.2"
   }
 }
