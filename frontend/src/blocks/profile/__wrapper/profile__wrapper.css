@@ -1,0 +1,12 @@
+.profile__wrapper {
+  display: flex;
+  gap: 25px;
+  align-items: baseline;
+}
+
+@media screen and (max-width: 984px) {
+  .profile__wrapper{
+    gap: 10px;
+    transform: translateX(14px);/* Из-за обёртки и кнопки нужно выровнять текст в центр */
+  }
+}
