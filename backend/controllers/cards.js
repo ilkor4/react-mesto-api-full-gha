@@ -52,7 +52,7 @@ module.exports.likeCard = (req, res, next) => {
     .populate(['owner', 'likes'])
     .then((card) => {
       if (!card) next(new NotFoundError('Передан несуществующий _id карточки.'));
-      else res.send(card.likes);
+      else res.send(card);
     })
     .catch((err) => {
       if (err.name === 'CastError') next(new CodeError('Переданы некорректные данные для постановки лайка.'));
@@ -71,7 +71,7 @@ module.exports.deleteLike = (req, res, next) => {
     .populate(['owner', 'likes'])
     .then((card) => {
       if (!card) next(new NotFoundError('Передан несуществующий _id карточки.'));
-      else res.send(card.likes);
+      else res.send(card);
     })
     .catch((err) => {
       if (err.name === 'CastError') next(new CodeError('Переданы некорректные данные для снятия лайка.'));

@@ -1,4 +1,4 @@
-const BASE_URL = "https://auth.nomoreparties.co";
+const BASE_URL = "https://api.ilkor.students.nomoredomains.monster";
 
 export const register = (password, email) => {
   return fetch(BASE_URL + '/signup', {
@@ -17,6 +17,7 @@ export const register = (password, email) => {
 export const authorize = (password, email) => {
   return fetch(BASE_URL + '/signin', {
     method: 'POST',
+    credentials: 'include',
     headers: {
       "Content-type": "application/json"
     },
@@ -28,12 +29,12 @@ export const authorize = (password, email) => {
     .then((res) => handleSubmitResponse(res));
 }
 
-export const checkToken = (token) => {
+export const checkToken = () => {
   return fetch(BASE_URL + '/users/me', {
     method: 'GET',
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`
     }
   })
     .then((res) => handleSubmitResponse(res))

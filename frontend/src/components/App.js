@@ -32,16 +32,16 @@ const App = ()  => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem('jwt');
-
-    token && handleCheckToken(token);
+    handleCheckToken();
   }, [navigate]);
 
   useEffect(() => {
     if (isLogged) {
       Promise.all([api.getProfileInfo(), api.getInitialCards()])
       .then(([userRes, cardsRes]) => {
+        console.log(userRes)
         setCurrentUser(userRes);
+        console.log(cardsRes)
         setCards(cardsRes);
       })
       .catch(err => console.log(err));
@@ -148,12 +148,12 @@ const App = ()  => {
     });
   }
 
-  function handleCheckToken(token) {
-    auth.checkToken(token)
+  function handleCheckToken() {
+    auth.checkToken()
       .then(res => {
           setIsLogged(true);
 
-          setEmail(res.data.email);
+          setEmail(res.email);
 
           navigate('/', {replace: true});
         })
