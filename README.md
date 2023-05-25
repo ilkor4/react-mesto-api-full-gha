@@ -62,12 +62,12 @@
 ---
 
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/ilkor4/react-mesto-api-full-gha.git
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.1.58
 
-Frontend https://...
+Frontend https://ilkor.students.nomoredomains.monster
 
-Backend https://...
+Backend https://api.ilkor.students.nomoredomains.monster
