@@ -66,7 +66,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.1.58
+IP-адрес 10.129.0.5
 
 Frontend https://ilkor.students.nomoredomains.monster
 
