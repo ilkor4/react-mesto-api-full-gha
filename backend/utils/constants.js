@@ -1,6 +1,7 @@
 const allowedCors = [
   'http://localhost:3001',
   'https://ilkor.students.nomoredomains.monster',
+  'http://ilkor.students.nomoredomains.monster',
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';

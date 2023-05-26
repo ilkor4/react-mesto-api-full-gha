@@ -33,12 +33,11 @@ app.get('/crash-test', () => {
 
 app.use('/', userRouter);
 app.use('/', cardsRouter);
-
-app.use(errorLogger);
-
 app.use('*', (req, res, next) => {
   next(new NotFoundError('Ошибка 404. Данного ресурса не существует.'));
 });
+
+app.use(errorLogger);
 
 app.use(errors());
 
