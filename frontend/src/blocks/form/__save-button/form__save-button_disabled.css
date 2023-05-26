@@ -1,0 +1,7 @@
+.form__save-button_disabled {
+  pointer-events: none;
+  user-select: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
+  color: rgba(0, 0, 0, 0.2);
+}
