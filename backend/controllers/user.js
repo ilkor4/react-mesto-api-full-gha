@@ -112,3 +112,13 @@ module.exports.login = (req, res, next) => {
     })
     .catch(next);
 };
+
+module.exports.signOut = (req, res) => {
+  res.cookie('jwt', 'aaaa', {
+    httpOnly: true,
+    sameSite: true,
+    maxAge: 100,
+  })
+    .send({ message: 'Выход выполнен успешно.' })
+    .end();
+};

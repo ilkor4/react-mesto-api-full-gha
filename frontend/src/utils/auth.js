@@ -40,6 +40,17 @@ export const checkToken = () => {
     .then((res) => handleSubmitResponse(res))
 }
 
+export const signOut = () => {
+  return fetch(BASE_URL + '/signout', {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => handleSubmitResponse(res))
+}
+
 export const handleSubmitResponse = (res) => {
   return res.ok ?  res.json() : Promise.reject(`Ошибка: ${res.status}`);
 }

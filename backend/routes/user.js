@@ -6,6 +6,7 @@ const { regex } = require('../utils/constants');
 const {
   getUsers,
   getUser,
+  signOut,
   getCurrentUser,
   login,
   createUser,
@@ -28,6 +29,7 @@ router.post('/signup', celebrate({
     email: Joi.string().required().email(),
   }),
 }), createUser);
+router.get('/signout', auth, signOut);
 router.get('/users', auth, getUsers);
 router.get('/users/me', auth, getCurrentUser);
 router.get('/users/:id', celebrate({

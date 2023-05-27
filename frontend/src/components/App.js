@@ -134,11 +134,7 @@ const App = ()  => {
 
   function handleLoginUser(password, email) {
     auth.authorize(password, email)
-    .then(res => {
-      localStorage.setItem('jwt', res.token);
-
-      navigate('/', {replace: true});
-    })
+    .then(res => navigate('/', {replace: true}))
     .catch((err) => {
       console.log(err);
 
@@ -161,7 +157,11 @@ const App = ()  => {
   }
 
   function handleSignOutUser() {
-    localStorage.removeItem('jwt');
+    auth.signOut()
+      .then(res => {
+        navigate('/sign-in', {replace: true});
+      })
+      .catch(err => console.log(err));
   }
 
   return (
