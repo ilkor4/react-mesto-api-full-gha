@@ -153,11 +153,7 @@ const App = ()  => {
 
           navigate('/', {replace: true});
         })
-      .catch((err) => {
-        console.log(err);
-
-        navigate('/sign-in');
-      });
+      .catch(err => setIsLogged(false));
   }
 
   function handleSignOutUser() {
