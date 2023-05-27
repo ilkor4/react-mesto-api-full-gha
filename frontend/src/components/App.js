@@ -158,9 +158,7 @@ const App = ()  => {
 
   function handleSignOutUser() {
     auth.signOut()
-      .then(res => {
-        navigate('/sign-in', {replace: true});
-      })
+      .then(res => navigate('/sign-in', {replace: true}))
       .catch(err => console.log(err));
   }
 

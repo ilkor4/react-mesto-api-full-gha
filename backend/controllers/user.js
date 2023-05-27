@@ -117,7 +117,7 @@ module.exports.signOut = (req, res) => {
   res.cookie('jwt', 'aaaa', {
     httpOnly: true,
     sameSite: true,
-    maxAge: 100,
+    maxAge: 1,
   })
     .send({ message: 'Выход выполнен успешно.' })
     .end();
