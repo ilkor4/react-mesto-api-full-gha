@@ -1,7 +1,8 @@
-[![Tests](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml/badge.svg)](https://github.com/yandex-praktikum/react-mesto-api-full-gha/actions/workflows/tests.yml)
 <h1 align="center">react-mesto-api-full</h1>
 
 ---
+
+<img src="./frontend/src/images/mesto.png">
 
 <h2>Работа выполнена с использованием технологий:</h2>
 <ul>
@@ -35,7 +36,7 @@
 
 ## Функциональность бэкенда:
 <ul>
-  <li>GET /users — возвращает всех пользователей из базы</li>
+<li>GET /users — возвращает всех пользователей из базы</li>
 <li>GET /users/:userId — возвращает пользователя по _id</li>
 <li>POST /users — создаёт пользователя с переданными в теле запроса name , about и avatar</li>
 <li>PATCH /users/me — обновляет профиль пользователя</li>
@@ -55,19 +56,14 @@
 `/controllers` — папка с файлами контроллеров пользователя и карточки
 `/models` — папка с файлами описания схем пользователя и карточки
 
-<h2>Над проектом работал:</h2>
-<h3><a href="https://github.com/ilkor4" target="_blank">Корнелюк Илья</a></h3>
-
 
 ---
 
 
-Адрес репозитория: https://github.com/ilkor4/react-mesto-api-full-gha.git
-
 ## Ссылки на проект
 
-IP 158.160.1.58
+Адрес репозитория: https://github.com/ilkor4/react-mesto-api-full-gha.git
+Адрес деплоя: https://ilkor4.github.io/react-mesto-api-full-gha
 
-Frontend https://ilkor.students.nomoredomains.monster
-
-Backend https://api.ilkor.students.nomoredomains.monster
+<h2>Над проектом работал:</h2>
+<h3><a href="https://github.com/ilkor4" target="_blank">Корнелюк Илья</a></h3>

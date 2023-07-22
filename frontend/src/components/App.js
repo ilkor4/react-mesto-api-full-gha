@@ -39,9 +39,7 @@ const App = ()  => {
     if (isLogged) {
       Promise.all([api.getProfileInfo(), api.getInitialCards()])
       .then(([userRes, cardsRes]) => {
-        console.log(userRes)
         setCurrentUser(userRes);
-        console.log(cardsRes)
         setCards(cardsRes);
       })
       .catch(err => console.log(err));

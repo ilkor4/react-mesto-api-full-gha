@@ -82,7 +82,7 @@ class Api {
   }
 }
 
-const api = new Api('https://api.ilkor.students.nomoredomains.monster');
+const api = new Api('http://localhost:3000');
 
 export default api;
 
